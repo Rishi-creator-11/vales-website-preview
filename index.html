@@ -43,7 +43,10 @@ header.nav{position:sticky;top:0;z-index:20;background:rgba(22,27,31,.94);backdr
 .nav .btn{padding:9px 18px;font-size:16px}
 
 /* hero */
-.hero{background:var(--slate);padding:70px 0 84px}
+.hero{position:relative;isolation:isolate;background:linear-gradient(90deg,rgba(18,22,23,.93) 0%,rgba(18,22,23,.77) 48%,rgba(18,22,23,.38) 100%),url('img/prosciutto-benedict.jpg') center 48% / cover no-repeat;padding:92px 0 104px;min-height:620px}
+.hero::before{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,rgba(18,22,23,.48),transparent 45%)}
+.hero .wrap{position:relative;z-index:1}
+.hero h1{text-shadow:0 3px 22px rgba(0,0,0,.3)}
 .hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:44px;align-items:center}
 .hero h1{font-size:clamp(54px,9.5vw,124px);letter-spacing:-.015em}
 .hero h1 em{font-style:normal;color:var(--sun)}
@@ -135,7 +138,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   .menu-list.on{grid-template-columns:1fr}
   .nav nav a.hide-sm{display:none}
   section{padding:60px 0}
-  .hero{padding:44px 0 60px}
+  .hero{padding:58px 0 68px;min-height:0;background-position:58% center;background-image:linear-gradient(90deg,rgba(18,22,23,.88),rgba(18,22,23,.67)),url('img/prosciutto-benedict.jpg')}
+  .hero h1{font-size:clamp(48px,11vw,78px)}
+  .hero p.lede{font-size:18px}
 }
 </style>
 </head>
